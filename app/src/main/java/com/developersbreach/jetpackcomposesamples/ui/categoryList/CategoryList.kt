@@ -81,7 +81,7 @@ fun ItemCategory(
     )
 }
 
-@Preview("Category List Light Preview", widthDp = 360, heightDp = 640)
+@Preview("CategoryList Light Preview", widthDp = 360, heightDp = 640)
 @Composable
 fun PreviewLightCategoryList() {
     ComposeTheme(darkTheme = false) {
@@ -89,7 +89,7 @@ fun PreviewLightCategoryList() {
     }
 }
 
-@Preview("Category List Dark Preview", widthDp = 360, heightDp = 640)
+@Preview("CategoryList Dark Preview", widthDp = 360, heightDp = 640)
 @Composable
 fun PreviewDarkCategoryList() {
     ComposeTheme(darkTheme = true) {
