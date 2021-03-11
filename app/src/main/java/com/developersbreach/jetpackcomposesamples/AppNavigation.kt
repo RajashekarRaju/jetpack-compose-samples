@@ -10,7 +10,7 @@ import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import com.developersbreach.jetpackcomposesamples.ui.category.column.ColumnLayout
 import com.developersbreach.jetpackcomposesamples.ui.categoryList.CategoryList
-import com.developersbreach.jetpackcomposesamples.ui.category.constraitLayout.ConstraintLayout
+import com.developersbreach.jetpackcomposesamples.ui.category.constraitLayout.ConstraintLayouts
 
 /**
  * Destinations used in the App.
@@ -38,7 +38,7 @@ fun AppNavigation(
         }
 
         composable(AppDestinations.CATEGORY_CONSTRAINT_LAYOUT) {
-            ConstraintLayout(
+            ConstraintLayouts(
                 navigateUp = actions.navigateUp
             )
         }
