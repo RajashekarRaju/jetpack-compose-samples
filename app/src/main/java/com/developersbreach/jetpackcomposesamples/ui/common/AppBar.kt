@@ -26,8 +26,8 @@ fun CategoryAppBar(
     TopAppBar(
         backgroundColor = Color.Transparent,
         elevation = 0.dp,
-        contentColor = Color.White,
     ) {
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
