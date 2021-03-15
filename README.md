@@ -25,6 +25,7 @@ referring to lot of official jetpack compose samples which are available in GitH
 Best of all we got to do this in `Kotlin` way. Excited and long way to go from here.
 
 ## License
+
 ```
 Copyright 2021 Rajasekhar K E
 

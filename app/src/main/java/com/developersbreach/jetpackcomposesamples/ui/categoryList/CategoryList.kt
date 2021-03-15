@@ -1,9 +1,13 @@
 package com.developersbreach.jetpackcomposesamples.ui.categoryList
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -14,8 +18,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.developersbreach.jetpackcomposesamples.R
@@ -30,14 +34,31 @@ fun CategoryList(
     Surface(color = MaterialTheme.colors.background) {
         Scaffold(
             topBar = {
-                Text(
-                    text = stringResource(id = R.string.app_bar_title),
-                    style = MaterialTheme.typography.h4,
+                Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 16.dp),
-                    textAlign = TextAlign.Center
-                )
+                        .wrapContentHeight()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.icon),
+                        contentDescription = stringResource(R.string.content_desc_up_navigate),
+                        Modifier
+                            .size(80.dp)
+                            .padding(start = 16.dp)
+                            .clickable { selectedCategory(0) }
+                    )
+
+                    Text(
+                        text = stringResource(id = R.string.app_bar_title),
+                        style = MaterialTheme.typography.h4,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(start = 24.dp)
+                    )
+                }
             }
         ) {
             CategoryListBody(selectedCategory)
@@ -74,19 +95,11 @@ fun ItemCategory(
         style = MaterialTheme.typography.h5,
         modifier = Modifier
             .fillMaxWidth()
+            .padding(16.dp)
             .clickable {
                 selectedCategory(category.categoryNameId)
             }
-            .padding(16.dp)
     )
-}
-
-@Preview("CategoryList Light Preview", widthDp = 360, heightDp = 640)
-@Composable
-fun PreviewLightCategoryList() {
-    ComposeTheme(darkTheme = false) {
-        CategoryList(selectedCategory = { })
-    }
 }
 
 @Preview("CategoryList Dark Preview", widthDp = 360, heightDp = 640)
@@ -96,3 +109,11 @@ fun PreviewDarkCategoryList() {
         CategoryList(selectedCategory = { })
     }
 }
+
+// @Preview("CategoryList Light Preview", widthDp = 360, heightDp = 640)
+// @Composable
+// fun PreviewLightCategoryList() {
+//     ComposeTheme(darkTheme = false) {
+//         CategoryList(selectedCategory = { })
+//     }
+// }

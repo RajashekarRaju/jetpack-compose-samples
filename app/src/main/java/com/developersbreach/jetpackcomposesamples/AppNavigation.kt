@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.developersbreach.jetpackcomposesamples.ui.category.column.ColumnLayout
 import com.developersbreach.jetpackcomposesamples.ui.categoryList.CategoryList
 import com.developersbreach.jetpackcomposesamples.ui.category.constraitLayout.ConstraintLayouts
+import com.developersbreach.jetpackcomposesamples.ui.composeLogo.ComposeLogo
 
 /**
  * Destinations used in the App.
@@ -19,6 +20,7 @@ private object AppDestinations {
     const val CATEGORIES = "list of categories"
     const val CATEGORY_CONSTRAINT_LAYOUT = "constraint layout category"
     const val CATEGORY_COLUMN_LAYOUT = "column layout category"
+    const val CATEGORY_LOGO = "logo"
 }
 
 @ExperimentalAnimationApi
@@ -35,6 +37,12 @@ fun AppNavigation(
     ) {
         composable(AppDestinations.CATEGORIES) {
             CategoryList(selectedCategory = actions.category)
+        }
+
+        composable(AppDestinations.CATEGORY_LOGO) {
+            ComposeLogo(
+                navigateUp = actions.navigateUp
+            )
         }
 
         composable(AppDestinations.CATEGORY_CONSTRAINT_LAYOUT) {
@@ -55,10 +63,10 @@ private class AppActions(
     navController: NavHostController
 ) {
     val category: (Int) -> Unit = { selectedCategory: Int ->
-        if (selectedCategory == 1) {
-            navController.navigate(AppDestinations.CATEGORY_CONSTRAINT_LAYOUT)
-        } else if (selectedCategory == 2) {
-            navController.navigate(AppDestinations.CATEGORY_COLUMN_LAYOUT)
+        when (selectedCategory) {
+            1 -> navController.navigate(AppDestinations.CATEGORY_CONSTRAINT_LAYOUT)
+            2 -> navController.navigate(AppDestinations.CATEGORY_COLUMN_LAYOUT)
+            0 -> navController.navigate(AppDestinations.CATEGORY_LOGO)
         }
     }
 
