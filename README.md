@@ -1,11 +1,11 @@
 # Jetpack Compose Samples
 
-## :loudspeaker: I Need You
+<!-- ## :loudspeaker: I Need You
 
 I'm looking for people who can contribute to this repository along with me.
 
 If you are excited, learning or looking to contribute to `Compose` feel free to join the discussion
-or send me a mail to `developersbreach@gmail.com` i will send a slack invitation link to join.
+or send me a mail to `developersbreach@gmail.com` i will send a slack invitation link to join. -->
 
 ## :scroll: Description
 
