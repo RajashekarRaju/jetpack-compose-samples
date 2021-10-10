@@ -6,11 +6,12 @@ import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 
+@ExperimentalAnimationApi
 class MainActivity : ComponentActivity() {
 
-    @ExperimentalAnimationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             ComposeTheme {
                 AppNavigation()

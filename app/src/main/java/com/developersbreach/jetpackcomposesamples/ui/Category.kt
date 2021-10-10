@@ -11,8 +11,9 @@ data class Category(
             Category(1, "ConstraintLayout"),
             Category(2, "ColumnLayout"),
             Category(3, "RowLayout"),
-            Category(4, "AnimatedVisibility"),
-            Category(5, "Save State"),
+            Category(4, "Hourglass Animation"),
+            Category(5, "AnimatedVisibility"),
+            Category(6, "Save State"),
         )
     }
 }

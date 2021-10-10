@@ -12,7 +12,8 @@ private val DarkColorPalette = darkColors(
     secondary = grey500,
     secondaryVariant = grey300,
     background = black,
-    onBackground = grey100
+    onBackground = grey100,
+    surface = grey
 )
 
 private val LightColorPalette = lightColors(
@@ -21,7 +22,8 @@ private val LightColorPalette = lightColors(
     secondary = grey700,
     secondaryVariant = grey900,
     background = white,
-    onBackground = grey900
+    onBackground = grey900,
+    surface = grey100
 )
 
 @Composable
@@ -37,8 +39,6 @@ fun ComposeTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
-        shapes = Shapes,
         content = content
     )
 }
