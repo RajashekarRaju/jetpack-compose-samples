@@ -1,6 +1,7 @@
 package com.developersbreach.jetpackcomposesamples.ui.categoryList
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,13 +12,12 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -31,14 +31,16 @@ import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 fun CategoryList(
     selectedCategory: (Int) -> Unit
 ) {
-    Surface(color = MaterialTheme.colors.background) {
+    Surface(
+        color = MaterialTheme.colors.background
+    ) {
         Scaffold(
             topBar = {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .wrapContentHeight()
-                        .padding(vertical = 8.dp),
+                        .padding(8.dp)
+                        .wrapContentHeight(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
 
@@ -70,14 +72,13 @@ fun CategoryList(
 fun CategoryListBody(
     selectedCategory: (Int) -> Unit
 ) {
-
     // Save the scroll state of cats list
     val scrollState = rememberLazyListState()
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().padding(top = 16.dp),
         state = scrollState,
-        horizontalAlignment = Alignment.Start
+        horizontalAlignment = Alignment.Start,
     ) {
         items(categories) { category ->
             ItemCategory(category, selectedCategory)
@@ -90,16 +91,23 @@ fun ItemCategory(
     category: Category,
     selectedCategory: (Int) -> Unit
 ) {
-    Text(
-        text = category.categoryName,
-        style = MaterialTheme.typography.h5,
+
+    Card(
         modifier = Modifier
+            .padding(8.dp)
             .fillMaxWidth()
-            .padding(16.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(MaterialTheme.colors.surface)
             .clickable {
                 selectedCategory(category.categoryNameId)
             }
-    )
+    ) {
+        Text(
+            text = category.categoryName,
+            style = MaterialTheme.typography.h5,
+            modifier = Modifier.padding(16.dp)
+        )
+    }
 }
 
 @Preview("CategoryList Dark Preview", widthDp = 360, heightDp = 640)
