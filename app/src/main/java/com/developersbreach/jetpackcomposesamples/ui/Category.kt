@@ -14,6 +14,7 @@ data class Category(
             Category(4, "Hourglass Animation"),
             Category(5, "AnimatedVisibility"),
             Category(6, "Save State"),
+            Category(7, "Bottom Navigation View"),
         )
     }
 }

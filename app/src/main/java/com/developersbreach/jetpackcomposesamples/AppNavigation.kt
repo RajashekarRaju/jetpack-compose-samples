@@ -1,12 +1,14 @@
 package com.developersbreach.jetpackcomposesamples
 
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.developersbreach.jetpackcomposesamples.ui.bottomNav.BottomNavigationView
 import com.developersbreach.jetpackcomposesamples.ui.category.column.ColumnLayout
 import com.developersbreach.jetpackcomposesamples.ui.categoryList.CategoryList
 import com.developersbreach.jetpackcomposesamples.ui.category.constraitLayout.ConstraintLayouts
@@ -22,8 +24,10 @@ private object AppDestinations {
     const val CATEGORY_COLUMN_LAYOUT = "column layout category"
     const val CATEGORY_LOGO = "logo"
     const val CATEGORY_HOURGLASS_ANIMATION = "hourglass animation"
+    const val CATEGORY_BOTTOM_NAVIGATION_VIEW = "bottom navigation view"
 }
 
+@ExperimentalFoundationApi
 @ExperimentalAnimationApi
 @Composable
 fun AppNavigation(
@@ -63,6 +67,10 @@ fun AppNavigation(
                 navigateUp = actions.navigateUp
             )
         }
+
+        composable(AppDestinations.CATEGORY_BOTTOM_NAVIGATION_VIEW) {
+            BottomNavigationView()
+        }
     }
 }
 
@@ -74,6 +82,7 @@ private class AppActions(
             1 -> navController.navigate(AppDestinations.CATEGORY_CONSTRAINT_LAYOUT)
             2 -> navController.navigate(AppDestinations.CATEGORY_COLUMN_LAYOUT)
             4 -> navController.navigate(AppDestinations.CATEGORY_HOURGLASS_ANIMATION)
+            7 -> navController.navigate(AppDestinations.CATEGORY_BOTTOM_NAVIGATION_VIEW)
             0 -> navController.navigate(AppDestinations.CATEGORY_LOGO)
         }
     }
