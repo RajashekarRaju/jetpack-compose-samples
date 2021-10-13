@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.category.constraitLayout
+package com.developersbreach.jetpackcomposesamples.ui.layouts.constraitLayout
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize

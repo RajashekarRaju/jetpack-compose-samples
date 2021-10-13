@@ -72,7 +72,7 @@ fun CategoryList(
 fun CategoryListBody(
     selectedCategory: (Int) -> Unit
 ) {
-    // Save the scroll state of cats list
+    // Save the scroll state of categories list
     val scrollState = rememberLazyListState()
 
     LazyColumn(
