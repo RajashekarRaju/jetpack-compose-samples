@@ -39,6 +39,8 @@ fun ComposeTheme(
 
     MaterialTheme(
         colors = colors,
-        content = content
+        content = content,
+        shapes = Shapes,
+        typography = Typography
     )
 }
