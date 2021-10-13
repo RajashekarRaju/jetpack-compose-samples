@@ -60,7 +60,4 @@ dependencies {
 
     // Navigation
     implementation "androidx.navigation:navigation-compose:2.4.0-alpha10"
-
-    // Accompanist
-    // implementation 'dev.chrisbanes.accompanist:accompanist-insets:0.6.1'
 }
