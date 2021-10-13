@@ -5,7 +5,7 @@
 This repository contains samples on jetpack compose for building different components like layouts,
 animations, transitions, saving states and more.
 
-![JetpakcComposeRepositoryPreview](https://github.com/RajashekarRaju/jetpack-compose-samples/blob/master/Jetpack%20Compose%20Repository.gif)
+![JetpackComposeRepositoryPreview](https://github.com/RajashekarRaju/jetpack-compose-samples/blob/master/Jetpack%20Compose%20Repository.gif)
 
 `Jetpack Compose` is Android’s modern toolkit for building native UI. It enables you to quickly
 bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
@@ -18,6 +18,11 @@ Understanding to implement own `Theme` `Shape` `Typography` `Color` has became b
 referring to lot of official jetpack compose samples which are available in GitHub.
 
 Best of all we got to do this in `Kotlin` way. Excited and long way to go from here.
+
+## :people_holding_hands: Contributors
+Ahmed Sellami
+
+[![](https://github.com/Ahmed-Sellami.png?size=50)](https://github.com/Ahmed-Sellami)
 
 ## :loudspeaker: I Need You
 

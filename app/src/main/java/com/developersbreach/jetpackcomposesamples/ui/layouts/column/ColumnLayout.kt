@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.category.column
+package com.developersbreach.jetpackcomposesamples.ui.layouts.column
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

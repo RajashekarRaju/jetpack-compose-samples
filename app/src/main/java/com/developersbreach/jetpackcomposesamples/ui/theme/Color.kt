@@ -10,3 +10,7 @@ val grey700 = Color(0xFF616161)
 val grey900 = Color(0xFF212121)
 val grey = Color(0xFF181818)
 val black = Color(0xFF000000)
+
+val Blue = Color(0xFF3F2E8A)
+val Purple = Color(0xFF7C4AAB)
+val Red = Color(0xFFE66978)
