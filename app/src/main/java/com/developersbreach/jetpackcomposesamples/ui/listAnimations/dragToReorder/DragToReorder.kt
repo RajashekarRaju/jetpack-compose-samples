@@ -1,6 +1,6 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.dragToReorder
 
-import android.util.Log
+import android.annotation.SuppressLint
 import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.drag
@@ -14,11 +14,12 @@ import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesA
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.SlideState
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.lang.IndexOutOfBoundsException
 import kotlin.math.roundToInt
 import kotlin.math.sign
 
-
+@SuppressLint("UnnecessaryComposedModifier")
 fun Modifier.dragToReorder(
     shoesArticle: ShoesArticle,
     shoesArticles: MutableList<ShoesArticle>,
@@ -26,12 +27,12 @@ fun Modifier.dragToReorder(
     updateSlideState: (shoesArticle: ShoesArticle, slideState: SlideState) -> Unit,
     onDrag: () -> Unit,
     onStopDrag: (currentIndex: Int, destinationIndex: Int) -> Unit,
-): Modifier = composed {
+): Modifier = this.composed {
 
     val offsetX = remember { Animatable(0f) }
     val offsetY = remember { Animatable(0f) }
 
-    pointerInput(Unit) {
+    val offset = pointerInput(Unit) {
         // Wrap in a coroutine scope to use suspend functions for touch events and animation.
         coroutineScope {
             while (true) {
@@ -84,7 +85,7 @@ fun Modifier.dragToReorder(
                                     )
                                 } catch (e: IndexOutOfBoundsException) {
                                     numberOfItems = previousNumberOfItems
-                                    Log.i("DragToReorder", "Item is outside or at the edge")
+                                    Timber.e("DragToReorder - Item is outside or at the edge")
                                 }
                             }
                             listOffset = numberOfItems * offsetSign
@@ -107,6 +108,7 @@ fun Modifier.dragToReorder(
             // Use the animating offset value here.
             IntOffset(offsetX.value.roundToInt(), offsetY.value.roundToInt())
         }
+    offset
 }
 
 private fun calculateNumberOfSlidItems(

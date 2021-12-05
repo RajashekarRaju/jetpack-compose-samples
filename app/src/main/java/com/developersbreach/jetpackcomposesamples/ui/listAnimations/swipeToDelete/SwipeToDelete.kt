@@ -8,7 +8,6 @@ import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.horizontalDrag
 import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
 import androidx.compose.ui.input.pointer.consumePositionChange
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
@@ -23,8 +22,8 @@ fun Modifier.swipeToDelete(
     offsetX: Animatable<Float, AnimationVector1D>,
     maximumWidth: Float,
     onDeleted: () -> Unit
-): Modifier = composed {
-    pointerInput(Unit) {
+): Modifier {
+    return pointerInput(Unit) {
         // Used to calculate a settling position of a fling animation.
         val decay = splineBasedDecay<Float>(this)
         // Wrap in a coroutine scope to use suspend functions for touch events and animation.

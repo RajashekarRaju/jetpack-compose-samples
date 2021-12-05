@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.dragToReorder
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -11,13 +10,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import com.developersbreach.jetpackcomposesamples.R
-import com.developersbreach.jetpackcomposesamples.ui.common.CategoryAppBar
+import com.developersbreach.jetpackcomposesamples.ui.components.CategoryAppBar
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle.Companion.allShoesArticles
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.SlideState
 
 
-@ExperimentalAnimationApi
 @Composable
 fun DragToReorderAnimation(
     navigateUp: () -> Unit
@@ -38,7 +36,6 @@ fun DragToReorderAnimation(
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun DragToReorder() {
 
@@ -94,7 +91,6 @@ fun DragToReorder() {
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun ShoesList(
     modifier: Modifier,
