@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.hourglass
+package com.developersbreach.jetpackcomposesamples.ui.canvas.hourglass
 
 import androidx.compose.animation.animateColor
 import androidx.compose.animation.core.*

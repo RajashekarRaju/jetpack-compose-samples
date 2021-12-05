@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.bottomNav
+package com.developersbreach.jetpackcomposesamples.ui.materialComponents.bottomNav
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.*
@@ -17,7 +17,6 @@ import androidx.navigation.compose.rememberNavController
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 
 
-@ExperimentalFoundationApi
 @Composable
 fun BottomNavigationView() {
     val navController = rememberNavController()
@@ -77,7 +76,6 @@ fun BottomNavigationBar(
     }
 }
 
-@ExperimentalFoundationApi
 @Composable
 fun NavigationHost(
     navController: NavHostController

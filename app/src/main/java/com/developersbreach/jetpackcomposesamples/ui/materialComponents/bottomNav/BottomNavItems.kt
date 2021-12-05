@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.bottomNav
+package com.developersbreach.jetpackcomposesamples.ui.materialComponents.bottomNav
 
 import com.developersbreach.jetpackcomposesamples.R
 

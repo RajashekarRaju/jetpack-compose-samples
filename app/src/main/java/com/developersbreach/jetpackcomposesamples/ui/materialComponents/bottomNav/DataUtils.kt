@@ -1,4 +1,6 @@
-package com.developersbreach.jetpackcomposesamples.ui.bottomNav
+@file:Suppress("SpellCheckingInspection")
+
+package com.developersbreach.jetpackcomposesamples.ui.materialComponents.bottomNav
 
 import androidx.compose.ui.graphics.Color
 
