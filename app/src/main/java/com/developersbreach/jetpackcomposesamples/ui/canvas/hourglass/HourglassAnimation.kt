@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.hourglass
+package com.developersbreach.jetpackcomposesamples.ui.canvas.hourglass
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.*
@@ -17,7 +17,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.developersbreach.jetpackcomposesamples.ui.common.CategoryAppBar
+import com.developersbreach.jetpackcomposesamples.ui.components.CategoryAppBar
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 import com.developersbreach.jetpackcomposesamples.ui.theme.grey100
 import com.developersbreach.jetpackcomposesamples.ui.theme.grey900

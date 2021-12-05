@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.addItemToList
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
@@ -32,7 +31,6 @@ import kotlin.math.hypot
 
 private var maxRadiusPx = 0f
 
-@ExperimentalAnimationApi
 @Composable
 fun ShoesCard(
     shoesArticle: ShoesArticle,

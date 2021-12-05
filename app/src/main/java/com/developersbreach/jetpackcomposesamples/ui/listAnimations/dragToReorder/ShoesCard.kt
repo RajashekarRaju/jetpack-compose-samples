@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.dragToReorder
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.animation.core.tween
@@ -43,7 +42,7 @@ private var itemHeight = 0
 private var particleRadius = 0f
 private var slotItemDifference = 0f
 
-@ExperimentalAnimationApi
+
 @Composable
 fun ShoesCard(
     shoesArticle: ShoesArticle,

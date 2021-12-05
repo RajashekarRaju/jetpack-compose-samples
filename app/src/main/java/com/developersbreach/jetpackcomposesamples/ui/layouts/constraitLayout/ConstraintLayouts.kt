@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import com.developersbreach.jetpackcomposesamples.R
-import com.developersbreach.jetpackcomposesamples.ui.common.CategoryAppBar
+import com.developersbreach.jetpackcomposesamples.ui.components.CategoryAppBar
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 
 @Preview("ConstraintLayout Dark Preview", widthDp = 360, heightDp = 640)

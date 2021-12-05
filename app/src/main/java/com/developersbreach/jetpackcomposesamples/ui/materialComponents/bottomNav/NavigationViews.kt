@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.bottomNav
+package com.developersbreach.jetpackcomposesamples.ui.materialComponents.bottomNav
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import com.developersbreach.jetpackcomposesamples.R
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 
-@ExperimentalFoundationApi
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun FavoriteContactsScreen(
     contacts: ArrayList<String> = favoriteContacts()
@@ -39,14 +39,17 @@ fun FavoriteContactsScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Card(
-                    modifier = Modifier.clip(CircleShape)
+                    modifier = Modifier
+                        .clip(CircleShape)
                         .align(Alignment.CenterHorizontally),
                     backgroundColor = pickRandomColor(),
                 ) {
                     Text(
                         text = contact[0].toString(),
                         style = MaterialTheme.typography.h4,
-                        modifier = Modifier.padding(12.dp).size(48.dp),
+                        modifier = Modifier
+                            .padding(12.dp)
+                            .size(48.dp),
                         textAlign = TextAlign.Center,
                         color = Color.Black
                     )
@@ -70,24 +73,30 @@ fun RecentContactsScreen(
 ) {
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(28.dp),
-        modifier = Modifier.padding(top = 28.dp).fillMaxSize(),
+        modifier = Modifier
+            .padding(top = 28.dp)
+            .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         items(recent) { contact ->
             Row(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .padding(start = 16.dp, end = 12.dp, top = 4.dp, bottom = 4.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Card(
-                    modifier = Modifier.clip(CircleShape)
+                    modifier = Modifier
+                        .clip(CircleShape)
                         .align(Alignment.CenterVertically),
                     backgroundColor = pickRandomColor(),
                 ) {
                     Text(
                         text = contact[0].toString(),
                         style = MaterialTheme.typography.subtitle1,
-                        modifier = Modifier.padding(8.dp).size(24.dp),
+                        modifier = Modifier
+                            .padding(8.dp)
+                            .size(24.dp),
                         textAlign = TextAlign.Center,
                         color = Color.Black
                     )
@@ -106,7 +115,9 @@ fun RecentContactsScreen(
                 Icon(
                     painter = painterResource(id = R.drawable.phone),
                     contentDescription = null,
-                    modifier = Modifier.size(24.dp).weight(1.5f)
+                    modifier = Modifier
+                        .size(24.dp)
+                        .weight(1.5f)
                 )
             }
         }

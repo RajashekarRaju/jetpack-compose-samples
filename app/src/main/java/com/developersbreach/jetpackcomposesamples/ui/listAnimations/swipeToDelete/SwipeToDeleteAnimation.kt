@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.swipeToDelete
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -14,12 +13,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import com.developersbreach.jetpackcomposesamples.R
-import com.developersbreach.jetpackcomposesamples.ui.common.CategoryAppBar
+import com.developersbreach.jetpackcomposesamples.ui.components.CategoryAppBar
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle.Companion.allShoesArticles
 
 
-@ExperimentalAnimationApi
 @Composable
 fun SwipeToDeleteAnimation(
     navigateUp: () -> Unit
@@ -40,7 +38,6 @@ fun SwipeToDeleteAnimation(
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun SwipeToDelete() {
 
@@ -69,7 +66,6 @@ fun SwipeToDelete() {
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun ShoesList(
     modifier: Modifier,

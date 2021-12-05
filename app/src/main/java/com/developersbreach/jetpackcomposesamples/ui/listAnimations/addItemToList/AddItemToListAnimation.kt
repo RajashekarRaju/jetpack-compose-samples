@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.addItemToList
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -14,13 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import com.developersbreach.jetpackcomposesamples.R
-import com.developersbreach.jetpackcomposesamples.ui.common.CategoryAppBar
+import com.developersbreach.jetpackcomposesamples.ui.components.CategoryAppBar
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle
 import com.developersbreach.jetpackcomposesamples.ui.listAnimations.model.ShoesArticle.Companion.allShoesArticles
 import com.developersbreach.jetpackcomposesamples.ui.theme.*
 
 
-@ExperimentalAnimationApi
 @Composable
 fun AddItemToListAnimation(
     navigateUp: () -> Unit
@@ -41,7 +39,6 @@ fun AddItemToListAnimation(
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun AddItemToList() {
 
@@ -108,7 +105,6 @@ fun AddItemToList() {
     }
 }
 
-@ExperimentalAnimationApi
 @Composable
 fun ShoesList(
     modifier: Modifier,

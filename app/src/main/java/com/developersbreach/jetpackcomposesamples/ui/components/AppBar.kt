@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.common
+package com.developersbreach.jetpackcomposesamples.ui.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth

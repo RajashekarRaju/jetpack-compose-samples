@@ -1,4 +1,4 @@
-package com.developersbreach.jetpackcomposesamples.ui.composeLogo
+package com.developersbreach.jetpackcomposesamples.ui.canvas.composeLogo
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxSize

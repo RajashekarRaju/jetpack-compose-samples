@@ -5,6 +5,31 @@
 This repository contains samples on jetpack compose for building different components like layouts,
 animations, transitions, saving states and more.
 
+App building with MVI PATTERN follows similar to JetNews Architecture.
+
+Home Destination
+
+* Canvas
+  * Hourglass Draw and Animate :white_check_mark:
+  * Numbers Draw and Animate
+  * Draw Compose Logo
+* List Animations
+  * Add Item to List :white_check_mark:
+  * Swipe Item to Delete :white_check_mark:
+  * Drag Item to Reorder :white_check_mark:
+* Material Components
+  * BottomNavigationView :white_check_mark:
+  * Navigation Drawer
+  * Navigation Rail
+* Layouts
+  * ConstraintLayout
+  * Column
+  * Row
+  * Box
+* Navigation
+  * List to Detail :white_check_mark:
+  * Nested Navigation
+
 ![JetpackComposeRepositoryPreview](https://github.com/RajashekarRaju/jetpack-compose-samples/blob/master/Jetpack%20Compose%20Repository.gif)
 
 `Jetpack Compose` is Android’s modern toolkit for building native UI. It enables you to quickly
@@ -20,6 +45,7 @@ referring to lot of official jetpack compose samples which are available in GitH
 Best of all we got to do this in `Kotlin` way. Excited and long way to go from here.
 
 ## :people_holding_hands: Contributors
+
 Ahmed Sellami
 
 [![](https://github.com/Ahmed-Sellami.png?size=50)](https://github.com/Ahmed-Sellami)

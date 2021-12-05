@@ -1,6 +1,5 @@
 package com.developersbreach.jetpackcomposesamples.ui.listAnimations.swipeToDelete
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -34,7 +33,6 @@ import kotlin.math.cos
 import kotlin.math.roundToInt
 import kotlin.math.sin
 
-@ExperimentalAnimationApi
 @Composable
 fun ShoesCard(
     shoesArticle: ShoesArticle,
@@ -169,9 +167,11 @@ fun ShoesCard(
 
                     Spacer(Modifier.width(8.dp))
 
-                    Divider(modifier = Modifier
-                        .fillMaxHeight()
-                        .width(1.dp))
+                    Divider(
+                        modifier = Modifier
+                            .fillMaxHeight()
+                            .width(1.dp)
+                    )
 
                     Spacer(Modifier.width(8.dp))
 
