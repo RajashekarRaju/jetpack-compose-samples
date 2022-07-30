@@ -2,9 +2,10 @@ package com.developersbreach.jetpackcomposesamples.ui.materialComponents.bottomN
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Card
@@ -23,14 +24,13 @@ import androidx.compose.ui.unit.dp
 import com.developersbreach.jetpackcomposesamples.R
 import com.developersbreach.jetpackcomposesamples.ui.theme.ComposeTheme
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun FavoriteContactsScreen(
     contacts: ArrayList<String> = favoriteContacts()
 ) {
     LazyVerticalGrid(
-        cells = GridCells.Fixed(2),
         modifier = Modifier.padding(top = 28.dp),
+        columns = GridCells.Fixed(2)
     ) {
         items(contacts) { contact ->
 

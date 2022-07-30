@@ -91,7 +91,7 @@ fun Modifier.dragToReorder(
                             listOffset = numberOfItems * offsetSign
                         }
                         // Consume the gesture event, not passed to external
-                        change.consumePositionChange()
+                        change.consume()
                     }
                 }
                 launch {

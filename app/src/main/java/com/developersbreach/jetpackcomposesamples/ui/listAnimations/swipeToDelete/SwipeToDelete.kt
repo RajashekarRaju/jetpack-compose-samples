@@ -8,7 +8,6 @@ import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.horizontalDrag
 import androidx.compose.foundation.layout.offset
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.pointer.consumePositionChange
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.input.pointer.positionChange
 import androidx.compose.ui.input.pointer.util.VelocityTracker
@@ -46,7 +45,7 @@ fun Modifier.swipeToDelete(
                             // Record the velocity of the drag.
                             velocityTracker.addPosition(change.uptimeMillis, change.position)
                             // Consume the gesture event, not passed to external
-                            change.consumePositionChange()
+                            change.consume()
                         }
                     }
                 }
